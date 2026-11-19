@@ -1,11 +1,14 @@
 # marketia.uk
 
-Static one‑page site for marketia (Tia) — social media management & content creation, Dorset.
+Static site for marketia (Tia) — social media management & content creation, Dorset.
 
-- `index.html` — the page
-- `css/style.css`, `js/main.js` — styling and small enhancements (mobile nav, mailto contact form)
-- `assets/` — drop Tia's logo and photos here (see `assets/README.md`)
-- `BRIEF.md` — everything collated from @markettiaa that informed the copy and design
+- `index.html` home · `about.html` · `services.html` · `work.html` · `contact.html`
+- `css/style.css`, `js/main.js` — styling, scroll reveals, mobile nav, the enquiry form (mailto)
+- `assets/` — drop Tia's photos here; `assets/README.md` lists every image slot by name
+- `BRIEF.md` — what was collated from @markettiaa plus Tia's own brief
+
+Header and footer are repeated in each page, so a nav change means editing all five files.
+Service buttons link to `contact.html?service=management|content|creator`, which pre‑ticks the matching box on the form.
 
 ## Run locally
 ```bash

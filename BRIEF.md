@@ -47,3 +47,37 @@
 - Any client names / testimonials she is happy to show
 - Confirm services list and whether to show pricing / packages
 - Preferred contact: email only, or also a phone / booking link
+
+---
+
+# Tia's brief (received 19 Nov 2026, via Nick)
+
+## Positioning
+- marketia: her own creative brand — social media management, content creation, photography, videography
+- Tagline: **behind the content, behind the brands.**
+- Works with businesses, brands and creators, "capturing the moments, details and stories behind them through a creative lens"
+- **iPhone‑led** content: natural, authentic, behind‑the‑scenes, current, story‑led — not staged or traditional marketing
+- Instagram is the main showcase: client work, reels, BTS, voiceovers, day‑in‑the‑life, campaigns, process
+
+## Goal of the site
+- Portfolio + enquiry point. Get a feel for her style, see work, understand services, get in touch
+- Very visual — photography and video should lead
+
+## Services
+1. **Social media management** — ongoing, week in week out: content planning, filming, editing, reels & posts, captions, scheduling, publishing, keeping channels active and on‑brand. Actively taking on new ongoing clients.
+2. **Content creation** — one‑off or regular: half/full‑day shoots; photo + video content banks; BTS for campaigns, launches, events; creator days (experiences, events); reels, voiceovers, day‑in‑the‑life, lifestyle content. "Come in for a few hours, capture it, leave edited content ready to use." Wants more creator‑led work.
+
+## Pages
+- Home — strong intro, what she does, standout visuals
+- About — her, her approach, the story (reference: the welcome carousel post)
+- Services — the two services explained clearly, enquire option on each
+- Work / Portfolio — editorial, image‑led gallery of photography, video, reels, projects; images coming via Google Drive
+- Contact — enquiry form: what the business does, what makes it stand out, what they need help with, how they heard about marketia, when they'd like to start, upcoming projects
+- Instagram linked throughout; latest‑posts section; clickable reels
+
+## Aesthetic
+- Elevated, chic, minimal, editorial; modern lifestyle / creative‑studio feel; magazine‑inspired
+- Cream / warm ivory backgrounds; chocolate / deep brown type; soft taupe neutrals
+- Elegant serif + clean modern sans; lots of white space; subtle details
+- "marketia" always lowercase as the logo
+- Avoid: AI‑looking, corporate, template‑like. Simple but considered.
