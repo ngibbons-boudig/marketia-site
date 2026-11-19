@@ -19,6 +19,10 @@ Hosted on **GitHub Pages** from the `main` branch of
 https://github.com/ngibbons-boudig/marketia-site (root folder, `CNAME` = marketia.uk).
 Every push to `main` redeploys within a minute or two.
 
+**Preview (until DNS is done):** https://ngibbons-boudig.github.io/marketia-site/
+The `CNAME` file is removed for now so this preview URL works. Once GoDaddy DNS points at GitHub Pages,
+restore it with `echo marketia.uk > CNAME`, commit and push; the preview URL will then redirect to marketia.uk.
+
 ## DNS at GoDaddy (one‑off)
 
 The domain's nameservers are GoDaddy's (`ns25/ns26.domaincontrol.com`). In GoDaddy → My Products → marketia.uk → **DNS**:
