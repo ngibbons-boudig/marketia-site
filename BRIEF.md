@@ -81,3 +81,23 @@
 - Elegant serif + clean modern sans; lots of white space; subtle details
 - "marketia" always lowercase as the logo
 - Avoid: AI‑looking, corporate, template‑like. Simple but considered.
+
+---
+
+# Tia's portfolio PDF (received 19 Nov 2026)
+
+## Services detail (page 2)
+- **Social media management:** Instagram, Facebook & TikTok · content planning · reels, feed posts & stories · personalised captions · content creation & editing · scheduling & publishing · community engagement · "keeping your brand consistent, current & engaging"
+- **Content creation:** short‑form video & reels · photography · creative concepts & content ideas · editing in CapCut, Canva & Photoshop · equipment: Panasonic Lumix TZ99, iPhone, tripod & lighting
+- **Content shoot days:** one‑off days · photo & video · bulk content for social · reels filmed and edited ready to post · product, space, team & lifestyle content · delivered ready to use
+- **Pricing:** tailored per business. Management packages priced on platforms, frequency and volume; shoot days on hours needed and amount of content.
+
+## Case studies
+- **Rockwater Village** (@rockwatervillagepoole, Sandbanks & Branksome) — account collaboration + event photography & content (yoga event, food, spritzes, champagne, venue)
+- **Lucas Takeaway Café** (@lucastakeawaycafe) — management. 90 days: 226.8K views · +385 net followers · 114K reel views · 3,016 followers achieved
+- **Bellagio Pizzeria** (@bellagio_pizzeria) — management. 90 days: 18K+ content views · +181 net followers · 1,083 interactions · 62.1% views from non‑followers
+- **Mat&Mingle Sydney** (@matandminglesydney) — managed socials for a women's yoga, breathwork & community group; grew to ~400 followers; weekly events of ~20 women
+- **Personal lifestyle photography** — Bondi pool, beach, surf, cafés, streets, food
+
+## Contact (page 9)
+- Instagram @markettiaa · Phone 07538 963391 · Email hello@marketia.uk

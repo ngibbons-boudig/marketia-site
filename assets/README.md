@@ -1,9 +1,12 @@
 # images
 
-`img/` currently holds crops taken from Tia's Instagram carousel slides (small, roughly 200 to 900px) plus the wordmark
-cut from her logo sheet (`logo-dark.png`, `logo-mid.png`, `logo-light.png`). They are fine for layout and the
-smaller tiles but will look soft at hero and gallery size: swap each for the full-resolution original from the
-Google Drive when it arrives, keeping the same filename so nothing in the HTML needs to change.
+`img/` holds:
+- the wordmark cut from Tia's logo sheet (`logo-dark.png`, `logo-mid.png`, `logo-light.png`)
+- photos exported from her portfolio PDF, named by client: `rockwater-*`, `lucas-*`, `bellagio-*`, `mm-*` (Mat&Mingle), `life-*` (lifestyle), `tia-steps`
+- crops from her Instagram carousel slides: `hero-desk`, `about-standing`, `work-05`, `kid-*`, `syd-*`
+
+Most PDF photos are 480 to 1600px, which is fine on the site. The carousel crops are smaller and look soft at hero size,
+so swap `hero-desk.jpg` and `about-standing.jpg` for originals when Tia has them, keeping the same filenames.
 
 # image slots (what each file is used for)
 
