@@ -20,6 +20,31 @@
     });
   }
 
+  // scroll reveals
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        el.classList.add('in');
+        setTimeout(function () { el.classList.add('done'); }, 1400);
+        io.unobserve(el);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in', 'done'); });
+  }
+
+  // header shadow once the page has scrolled
+  var header = document.querySelector('.site-header');
+  var onScroll = function () {
+    header.classList.toggle('scrolled', window.scrollY > 24);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
   // contact form → opens the visitor's email client with everything filled in.
   // Swap this for a form service (Formspree / Netlify Forms) once hosting is chosen.
   var form = document.getElementById('contact-form');

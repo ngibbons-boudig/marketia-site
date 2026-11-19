@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Archivo+Black&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23f4eee5'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%235a4332'%3Em%3C/text%3E%3C/svg%3E">
 </head>
@@ -92,21 +93,21 @@
   <section id="about" class="about">
     <div class="wrap about-grid">
       <div class="about-media">
-        <div class="polaroid tilt-l">
+        <div class="polaroid tilt-l" data-reveal="tilt-l">
           <div class="ph ph-portrait ph-alt" role="img" aria-label="Tia behind the scenes on a shoot">
             <span class="ph-label">behind the scenes</span>
           </div>
           <figcaption class="polaroid-caption">the one who documents everything</figcaption>
         </div>
-        <div class="postcard">
+        <div class="postcard" data-reveal="tilt-r">
           <p class="postcard-stamp">sydney → dorset</p>
           <p>two years in sydney, where i fell in love with content creation, then back home to make a career of it.</p>
         </div>
       </div>
 
-      <div class="about-copy">
+      <div class="about-copy" data-reveal>
         <p class="eyebrow">meet the founder</p>
-        <h2 class="display">TIA</h2>
+        <h2 class="display"><span>TIA</span></h2>
         <p>
           i've always been the friend who documents absolutely everything. the one making
           everyone redo their cheers three times for the perfect shot, forever running out
@@ -130,13 +131,13 @@
   <!-- ============ SERVICES ============ -->
   <section id="services" class="services">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <p class="eyebrow">what i do</p>
-        <h2 class="display">SERVICES</h2>
+        <h2 class="display"><span>SERVICES</span></h2>
         <p class="section-intro">from a one‑off shoot to running your socials week in, week out. every brand is different, so everything is shaped around you.</p>
       </div>
 
-      <div class="cards">
+      <div class="cards" data-reveal>
         <article class="card">
           <span class="card-num">01</span>
           <h3>social media management</h3>
@@ -174,21 +175,21 @@
         </article>
       </div>
 
-      <p class="services-note">based in dorset and happy to travel across the uk. <a href="#contact">get in touch</a> for availability and a quote.</p>
+      <p class="services-note" data-reveal>based in dorset and happy to travel across the uk. <a href="#contact">get in touch</a> for availability and a quote.</p>
     </div>
   </section>
 
   <!-- ============ WORK ============ -->
   <section id="work" class="work">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <p class="eyebrow">the portfolio</p>
-        <h2 class="display">MY WORK</h2>
+        <h2 class="display"><span>MY WORK</span></h2>
         <p class="section-intro">brands, businesses and creators, from ongoing socials to one‑off shoots. a few favourites below, and plenty more over on instagram.</p>
       </div>
 
       <!-- Portfolio grid: replace each .ph tile with <img src="assets/work-0N.jpg" alt="…"> -->
-      <div class="work-grid">
+      <div class="work-grid" data-reveal>
         <a class="tile ph" href="https://www.instagram.com/markettiaa/" target="_blank" rel="noopener" aria-label="Portfolio image 1"><span class="ph-label">work 01</span></a>
         <a class="tile ph ph-alt" href="https://www.instagram.com/markettiaa/" target="_blank" rel="noopener" aria-label="Portfolio image 2"><span class="ph-label">work 02</span></a>
         <a class="tile ph ph-dark" href="https://www.instagram.com/markettiaa/" target="_blank" rel="noopener" aria-label="Portfolio image 3"><span class="ph-label">work 03</span></a>
@@ -197,7 +198,7 @@
         <a class="tile ph" href="https://www.instagram.com/markettiaa/" target="_blank" rel="noopener" aria-label="Portfolio image 6"><span class="ph-label">work 06</span></a>
       </div>
 
-      <div class="ig-strip">
+      <div class="ig-strip" data-reveal="scale">
         <div class="ig-strip-copy">
           <p class="eyebrow">follow the journey</p>
           <h3>@markettiaa on instagram</h3>
@@ -219,12 +220,12 @@
   <!-- ============ CONTACT ============ -->
   <section id="contact" class="contact">
     <div class="wrap contact-grid">
-      <div class="contact-copy">
+      <div class="contact-copy" data-reveal="left">
         <p class="eyebrow">let's talk</p>
-        <h2 class="display">SAY HELLO</h2>
+        <h2 class="display"><span>SAY HELLO</span></h2>
         <p>got a brand, a launch or a feed that needs some love? tell me a bit about it and i'll come back to you.</p>
 
-        <ul class="contact-list">
+        <ul class="contact-list" data-reveal>
           <li>
             <span class="contact-label">email</span>
             <a href="mailto:hello@marketia.uk">hello@marketia.uk</a>
@@ -240,7 +241,7 @@
         </ul>
       </div>
 
-      <form class="contact-form" id="contact-form" novalidate>
+      <form class="contact-form" id="contact-form" novalidate data-reveal="right">
         <div class="field">
           <label for="f-name">your name</label>
           <input id="f-name" name="name" type="text" autocomplete="name" required>
