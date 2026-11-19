@@ -42,6 +42,32 @@
     targets.forEach(function (el) { el.classList.add('in', 'done'); });
   }
 
+  // reels: play while in view, muted; tap the sound button to unmute one at a time
+  var reels = $$('.reel video');
+  if (reels.length && 'IntersectionObserver' in window) {
+    var vo = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var v = en.target;
+        if (en.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        else { v.pause(); }
+      });
+    }, { threshold: 0.35 });
+    reels.forEach(function (v) { vo.observe(v); });
+  }
+  $$('.reel .sound').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var v = btn.parentNode.querySelector('video');
+      var turnOn = v.muted;
+      reels.forEach(function (o) { o.muted = true; });
+      $$('.reel .sound').forEach(function (b) { b.setAttribute('aria-pressed', 'false'); b.textContent = 'sound'; });
+      v.muted = !turnOn;
+      btn.setAttribute('aria-pressed', turnOn ? 'true' : 'false');
+      btn.textContent = turnOn ? 'mute' : 'sound';
+      if (turnOn) { var p2 = v.play(); if (p2 && p2.catch) p2.catch(function () {}); }
+    });
+  });
+
   // enquiry form
   var form = $('#enquiry');
   if (form) {

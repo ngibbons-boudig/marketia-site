@@ -8,6 +8,12 @@
 Most PDF photos are 480 to 1600px, which is fine on the site. The carousel crops are smaller and look soft at hero size,
 so swap `hero-desk.jpg` and `about-standing.jpg` for originals when Tia has them, keeping the same filenames.
 
+# video
+
+`video/` holds the five reels from Tia's Drive, compressed to 540p MP4 with poster JPEGs of the same name
+(`boat-club-2`, `boat-club-3`, `lulas`, `midas`, `outlaw`). They play muted when scrolled into view on the work page.
+To add a reel: drop `name.mp4` + `name.jpg` here and add a line to `REELS` in the generator (or copy a `<figure class="reel">` block).
+
 # image slots (what each file is used for)
 
 Every placeholder on the site is a `<div class="img ph …" data-slot="…">`. To fill one, replace it with:
