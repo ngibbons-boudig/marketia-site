@@ -2,14 +2,16 @@
    marketia — editorial, cream & chocolate
    --------------------------------------------------------------------- */
 :root{
-  --ivory:#f6f1e8;
-  --cream:#efe7da;
-  --taupe:#d8cbb8;
-  --stone:#b9a68d;
-  --mocha:#8a6d55;
-  --choc:#4f3a2b;
-  --ink:#2b1f17;
-  --rule:rgba(79,58,43,.16);
+  /* tia's palette: #f7f4ef · #ede6dc · #b69d87 · #765647 · #493127 ; wordmark golds #856a47 / #bb9868 */
+  --ivory:#f7f4ef;
+  --cream:#ede6dc;
+  --taupe:#d6c8b8;
+  --stone:#b69d87;
+  --mocha:#765647;
+  --choc:#493127;
+  --ink:#2e1f18;
+  --gold:#856a47;
+  --rule:rgba(73,49,39,.16);
   --serif:"Cormorant Garamond", "Times New Roman", serif;
   --sans:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --wrap:1240px;
@@ -39,7 +41,7 @@ em{font-family:var(--serif);font-style:italic}
 /* ---------- type ---------- */
 .label{
   font-family:var(--sans);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--mocha);margin:0 0 1.1rem;
+  color:var(--gold);margin:0 0 1.1rem;
 }
 .label.num::before{content:attr(data-num);margin-right:1.2em;color:var(--stone)}
 .h-xl{font-size:clamp(2.8rem,6.2vw,5.6rem);letter-spacing:-.015em;line-height:1}
@@ -75,10 +77,12 @@ em{font-family:var(--serif);font-style:italic}
 .textlink:hover::after{transform:translateX(4px)}
 
 /* ---------- header ---------- */
-.site-header{position:sticky;top:0;z-index:50;background:rgba(246,241,232,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:box-shadow .4s}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(247,244,239,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:box-shadow .4s}
 .site-header.scrolled{box-shadow:0 1px 0 var(--rule)}
 .nav-row{display:flex;align-items:center;justify-content:space-between;height:76px}
-.wordmark{font-family:var(--serif);font-size:1.85rem;font-weight:500;letter-spacing:.005em;color:var(--choc);text-decoration:none;line-height:1}
+.wordmark{display:inline-block;line-height:0;text-decoration:none}
+.wordmark img{height:26px;width:auto}
+.footer-grid .wordmark img{height:34px}
 .site-nav{display:flex;align-items:center;gap:2.1rem}
 .site-nav a{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--choc);position:relative;padding:.3em 0}
 .site-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--choc);transition:right .35s var(--ease)}
@@ -99,6 +103,7 @@ em{font-family:var(--serif);font-style:italic}
 .img.r32{aspect-ratio:3/2}
 .img.r169{aspect-ratio:16/9}
 .img.r916{aspect-ratio:9/16}
+.img.r23{aspect-ratio:2/3}
 /* placeholder tone until a real image is dropped in */
 .img.ph{background:linear-gradient(165deg,var(--cream),var(--taupe))}
 .img.ph.deep{background:linear-gradient(165deg,var(--stone),var(--mocha))}
@@ -260,7 +265,6 @@ figcaption{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(-
 /* ---------- footer ---------- */
 .site-footer{padding:clamp(48px,6vw,80px) 0 40px;border-top:1px solid var(--rule);background:var(--ivory)}
 .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:var(--gutter);align-items:start}
-.footer-grid .wordmark{font-size:2.2rem}
 .footer-tag{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--mocha);margin:.6rem 0 0}
 .footer-grid .label{margin-bottom:.8rem}
 .footer-grid li{padding:.25rem 0}
@@ -332,3 +336,9 @@ figcaption{font-family:var(--serif);font-style:italic;font-size:1rem;color:var(-
   .gallery figure,.gallery .w6,.gallery .w8,.gallery .w3,.gallery .w5,.gallery .w7{grid-column:span 12}
   .edit-grid > *,.edit-grid .span5,.edit-grid .span7,.edit-grid .span6,.edit-grid .span3{grid-column:span 12}
 }
+
+/* ---------- about: then & now strip ---------- */
+.then-now{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,18px);margin-top:2.4rem}
+.then-now .img{aspect-ratio:1}
+.then-now figcaption{grid-column:1 / -1;margin-top:.2rem}
+@media (max-width:560px){.then-now{grid-template-columns:1fr 1fr}}
