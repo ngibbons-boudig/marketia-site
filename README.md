@@ -3,12 +3,15 @@
 Static site for marketia (Tia) — social media management & content creation, Dorset.
 
 - `index.html` home · `about.html` · `services.html` · `work.html` · `contact.html`
-- `css/style.css`, `js/main.js` — styling, scroll reveals, mobile nav, the enquiry form (mailto)
+- `css/style.css`, `js/main.js` — styling, scroll reveals, mobile nav, reels, the enquiry form, the font preview switch
 - `assets/` — drop Tia's photos here; `assets/README.md` lists every image slot by name
 - `BRIEF.md` — what was collated from @markettiaa plus Tia's own brief
+- `FEEDBACK.md` — Tia's round‑1 feedback, what was done and what's still waiting on her
 
 Header and footer are repeated in each page, so a nav change means editing all five files.
-Service buttons link to `contact.html?service=management|content|creator`, which pre‑ticks the matching box on the form.
+Service buttons link to `contact.html?service=management|content|creator#enquiry`, which pre‑ticks the matching box and scrolls to the form.
+
+**Font preview:** add `?fonts=bodoni` or `?fonts=playfair` to any page URL to try the alternative pairings (default is Cormorant Garamond + DM Sans). A small switcher appears bottom‑left; `?fonts=off` clears it. The pages are generated from a Python template; the generator lives in Nick's scratchpad (`gen.py`), so edit the HTML directly if that is not to hand.
 
 ## Run locally
 ```bash
@@ -43,5 +46,7 @@ Then in the repo → Settings → Pages, wait for the DNS check to pass and tick
 
 ## Contact form
 
-The form currently opens the visitor's email app addressed to hello@marketia.uk, so it works without a backend.
-To receive submissions directly instead, point the form at a service such as Formspree and remove the mailto handler in `js/main.js`.
+The form posts from the page to **formsubmit.co**, which emails each enquiry to hello@marketia.uk (no account needed).
+**First‑time activation:** the first submission triggers an email to hello@marketia.uk with an "Activate" link; click it once
+and every later enquiry arrives straight away. If the send ever fails, the page opens the visitor's email app with everything
+filled in, so nothing is lost. To change the destination address, edit the form's `action` in `contact.html` (via the generator).

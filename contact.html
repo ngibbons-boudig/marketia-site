@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>contact — marketia</title>
-  <meta name="description" content="start an enquiry with marketia about social media management or a content shoot.">
+  <meta name="description" content="Start an enquiry with marketia about social media management or a content shoot.">
   <meta property="og:title" content="contact — marketia">
-  <meta property="og:description" content="start an enquiry with marketia about social media management or a content shoot.">
+  <meta property="og:description" content="Start an enquiry with marketia about social media management or a content shoot.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://marketia.uk/assets/og-image.jpg">
   <meta name="theme-color" content="#f7f4ef">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <script>document.documentElement.classList.add("js")</script>
+  <link id="fonts" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js");try{var f=new URLSearchParams(location.search).get("fonts")||localStorage.getItem("fonts");if(f)document.documentElement.setAttribute("data-fonts",f)}catch(e){}</script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f7f4ef'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%23493127'%3Em%3C/text%3E%3C/svg%3E">
 </head>
@@ -26,41 +26,45 @@
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span class="visually-hidden">Menu</span></button>
     <nav id="site-nav" class="site-nav">
       <a href="index.html">home</a><a href="about.html">about</a><a href="services.html">services</a><a href="work.html">work</a><a href="contact.html" aria-current="page">contact</a>
-      <a class="btn" href="contact.html">enquire</a>
+      <a class="btn" href="contact.html#enquiry">enquire</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
 
-  <section class="page-intro">
+  <section class="page-intro contact-intro">
     <div class="wrap">
       <p class="label">contact</p>
       <div class="split">
-        <h1 class="h-xl">let’s make <em>something</em>.</h1>
-        <p class="lede">tell me a little about your business and what you’re looking for. the more you share, the better i can come back to you with ideas.</p>
+        <h1 class="h-xl">let’s work <em>together</em>.</h1>
+        <p class="lede">Tell me everything, the big details and the small. I can’t wait to bring your vision to life!</p>
       </div>
     </div>
   </section>
 
-  <section class="section tight">
+  <section class="section tight contact-section">
     <div class="wrap contact-grid">
       <aside class="contact-side" data-reveal>
         <ul class="deets">
           <li><span class="label">email</span><a href="mailto:hello@marketia.uk">hello@marketia.uk</a></li>
           <li><span class="label">phone</span><a href="tel:+447538963391">07538 963391</a></li>
           <li><span class="label">instagram</span><a href="https://www.instagram.com/markettiaa/" target="_blank" rel="noopener">@markettiaa</a></li>
-          <li><span class="label">based</span><span class="v">dorset · across the uk</span></li>
+          <li><span class="label">based</span><span class="v">Dorset · across the UK</span></li>
         </ul>
         <p class="label">what happens next</p>
         <ul class="next-steps">
-          <li>i’ll reply by email, usually within a couple of days.</li>
-          <li>we’ll have a quick chat about what you need and when.</li>
-          <li>i’ll send over a simple plan, a quote and availability.</li>
+          <li><b>Let’s have a chat.</b> I’ll be in touch to arrange a quick discovery call so we can talk through your business, ideas, goals and what you’re looking for.</li>
+          <li><b>A plan, made for you.</b> Following our chat, I’ll put together a tailored proposal outlining my recommendations, creative concepts, moodboard, suggested deliverables, pricing and next steps.</li>
+          <li><b>Time to get started.</b> Once everything is agreed, we’ll go through onboarding, get to know your brand in more detail, organise content plans and calendars, and get everything in place for our first shoot or project.</li>
         </ul>
       </aside>
 
-      <form class="form" id="enquiry" novalidate data-reveal>
+      <form class="form" id="enquiry" novalidate data-reveal action="https://formsubmit.co/hello@marketia.uk" method="POST">
+        <input type="hidden" name="_subject" value="new enquiry from marketia.uk">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
         <fieldset>
           <legend>about you</legend>
           <div class="row">
@@ -75,8 +79,8 @@
 
         <fieldset>
           <legend>about the business</legend>
-          <div class="field"><label for="f-does">what does the business do?</label><textarea id="f-does" name="does" rows="3"></textarea></div>
-          <div class="field"><label for="f-special">what makes it stand out or special?</label><textarea id="f-special" name="special" rows="3"></textarea></div>
+          <div class="field"><label for="f-achieve">what would you like to achieve?</label><textarea id="f-achieve" name="goals" rows="4" required></textarea></div>
+          <div class="field"><label for="f-else">anything else I should know? <small>optional</small></label><textarea id="f-else" name="anything else" rows="3"></textarea></div>
         </fieldset>
 
         <fieldset>
@@ -84,15 +88,14 @@
           <div class="field">
             <label>what do you need support with? <small>tick any</small></label>
             <div class="checks">
-              <label class="check"><input type="checkbox" name="need" value="social media management"> social media management</label>
-              <label class="check"><input type="checkbox" name="need" value="content shoot (half / full day)"> a content shoot</label>
-              <label class="check"><input type="checkbox" name="need" value="campaign, launch or event bts"> campaign, launch or event</label>
-              <label class="check"><input type="checkbox" name="need" value="creator content"> creator content</label>
-              <label class="check"><input type="checkbox" name="need" value="reels / video"> reels &amp; video</label>
-              <label class="check"><input type="checkbox" name="need" value="not sure yet"> not sure yet</label>
+              <label class="check"><input type="checkbox" name="support" value="social media management"> social media management</label>
+              <label class="check"><input type="checkbox" name="support" value="content shoot (half / full day)"> a content shoot</label>
+              <label class="check"><input type="checkbox" name="support" value="campaign, launch or event"> campaign, launch or event</label>
+              <label class="check"><input type="checkbox" name="support" value="creator content"> creator content</label>
+              <label class="check"><input type="checkbox" name="support" value="reels / video"> reels &amp; video</label>
+              <label class="check"><input type="checkbox" name="support" value="not sure yet"> not sure yet</label>
             </div>
           </div>
-          <div class="field"><label for="f-help">tell me more about what you need help with</label><textarea id="f-help" name="help" rows="4" required></textarea></div>
           <div class="row">
             <div class="field">
               <label for="f-start">when would you like to start?</label>
@@ -106,22 +109,22 @@
             </div>
             <div class="field">
               <label for="f-heard">how did you hear about marketia?</label>
-              <select id="f-heard" name="heard">
+              <select id="f-heard" name="heard about marketia via">
                 <option value="">choose one</option>
-                <option>instagram</option>
+                <option>Instagram</option>
                 <option>word of mouth</option>
                 <option>saw your work with another business</option>
-                <option>google</option>
+                <option>Google</option>
                 <option>other</option>
               </select>
             </div>
           </div>
-          <div class="field"><label for="f-projects">any upcoming projects, launches or events? <small>optional</small></label><textarea id="f-projects" name="projects" rows="3"></textarea></div>
+          <div class="field"><label for="f-projects">any upcoming projects, launches or events? <small>optional</small></label><textarea id="f-projects" name="upcoming projects" rows="3"></textarea></div>
         </fieldset>
 
         <div class="form-foot">
           <button class="btn solid" type="submit">send enquiry</button>
-          <p class="form-note" id="form-note">this opens your email app with everything filled in, ready to send to hello@marketia.uk.</p>
+          <p class="form-note" id="form-note" aria-live="polite">Your enquiry comes straight to me. I’ll reply by email.</p>
         </div>
       </form>
     </div>
@@ -156,8 +159,8 @@
       <div>
         <p class="label">based</p>
         <ul>
-          <li>dorset, uk</li>
-          <li>available across the uk</li>
+          <li>Dorset, UK</li>
+          <li>available across the UK</li>
         </ul>
       </div>
     </div>
