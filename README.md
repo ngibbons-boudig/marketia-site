@@ -11,7 +11,7 @@ Static site for marketia (Tia) — social media management & content creation, D
 Header and footer are repeated in each page, so a nav change means editing all five files.
 Service buttons link to `contact.html?service=management|content|creator#enquiry`, which pre‑ticks the matching box and scrolls to the form.
 
-**Font preview:** add `?fonts=bodoni` or `?fonts=playfair` to any page URL to try the alternative pairings (default is Cormorant Garamond + DM Sans). A small switcher appears bottom‑left; `?fonts=off` clears it. The pages are generated from a Python template; the generator lives in Nick's scratchpad (`gen.py`), so edit the HTML directly if that is not to hand.
+**Font preview:** add `?fonts=bodoni` or `?fonts=playfair` to any page URL to try the alternative pairings (default is Cormorant Garamond + DM Sans). A small switcher appears bottom‑left; `?fonts=off` clears it. The five pages are generated from `tools/gen.py` (all copy and image placements live there): edit it, run `python3 tools/gen.py`, commit the HTML it writes.
 
 ## Run locally
 ```bash
