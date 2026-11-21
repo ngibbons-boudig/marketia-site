@@ -1,4 +1,51 @@
-# Tia’s feedback — round 1 (20 Nov 2026)
+# Tia’s feedback
+
+## Round 2 (WhatsApp, 20–21 Nov 2026)
+
+From her message and 27 annotated screenshots.
+
+**Site‑wide**
+- ✅ Fonts settled: Cormorant Garamond + DM Sans. The `?fonts=` preview switcher is removed.
+- ✅ “Bellaggio” (two Gs) everywhere, and the case study now links to the right account, @bellaggio_pizzeria.
+- ✅ Photo colour: her HEICs are Display P3; the first export dropped that profile, which flattened the colours. All photos are re‑exported with a proper P3→sRGB conversion and a lighter JPEG compression. No need for her to send files another way.
+- ✅ The four “about” photos brightened a touch as asked.
+
+**Home**
+- ✅ Hero is the single photo of her, no side images.
+- ✅ Highlights are all the same size and ratio (square). Rockwater events = wedding‑cake photo; Rockwater content = the terrace photo (the dull breakfast one is gone); Bondi = the sharp swimmers photo; the creators tile is captioned “content creation · the boat club & chewton glen”. ⏳ She is sending a new photo for that tile.
+- ✅ Services section: management photo = “New ongoing management picture” from Drive; content creation keeps the Summer Fridays display.
+
+**About**
+- ✅ Hero collage is now two bigger photos (white blazer, standing); the desk photo is only on the home page.
+- ✅ Story paragraphs all in one font.
+- ✅ Personal collection: four posts captioned the cotswolds / london / manchester / sydney; the 2025 collage removed.
+- ✅ “From the feed” aside paragraph removed (the embed is live, so it never needs updating).
+
+**Services**
+- ✅ “three ways to work together.” with her creators paragraph added to the intro.
+- ✅ Order is now management → content creation → content for creators → how it works.
+- ✅ Creators photos arranged so the two red‑sofa shots and the two boat shots sit in opposite corners.
+- ✅ “See a shoot day” goes to the reels. The enquire/about buttons land on the heading + text, and on phones the photo above is smaller.
+
+**Work**
+- ✅ Bellaggio reel is in (compressed to 540p like the others) and plays in the first slot of its case study.
+- ✅ Mosaics re‑laid so every photo fits with no gaps (big photo + four, then three squares).
+- ✅ Rockwater: “the venue” (singular).
+- ✅ Lifestyle strip: blurry pool photo out, sharp swimmers photo and the Cotswolds shot in.
+
+**Contact**
+- ✅ “What happens next” moved below the form, and it also appears in the thank‑you panel once an enquiry is sent.
+- ✅ The error she saw: the form service replied “needs activation” and the page treated that as a failure. It now explains gently and offers the email route as a button rather than bouncing to the email app.
+- ⏳ **Activation still outstanding.** formsubmit.co emails an “Activate Form” link to hello@marketia.uk on the first submission (one was triggered again on 21 Nov). If it isn’t in that inbox, check spam/junk, or confirm the hello@ mailbox actually exists in Google Workspace. Until it is clicked, submissions are not delivered.
+
+**Still waiting on Tia**
+1. New photo for the “content creation · the boat club & chewton glen” tile on the home page (she said she’d send it).
+2. Find and click the formsubmit.co activation email at hello@marketia.uk.
+3. GoDaddy login for DNS.
+
+---
+
+## Round 1 (20 Nov 2026)
 
 Status of every note from Tia’s message, her 45 annotated screenshots and the labelled Google Drive folder.
 ✅ done · ⏳ waiting on Tia · 💬 needs a decision

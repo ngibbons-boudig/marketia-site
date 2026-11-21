@@ -25,42 +25,13 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  // type previews for tia: ?fonts=cormorant | bodoni | playfair (remembered until ?fonts=off)
-  (function () {
-    var qs = new URLSearchParams(window.location.search).get('fonts');
-    var saved = null;
-    try { saved = localStorage.getItem('fonts'); } catch (e) {}
-    if (qs === 'off') { try { localStorage.removeItem('fonts'); } catch (e) {} document.documentElement.removeAttribute('data-fonts'); return; }
-    var current = qs || saved;
-    if (!current) return;
-    try { localStorage.setItem('fonts', current); } catch (e) {}
-    document.documentElement.setAttribute('data-fonts', current);
-    var extra = {
-      bodoni: 'https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&display=swap',
-      playfair: 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500&display=swap'
-    };
-    Object.keys(extra).forEach(function (k) {
-      var l = document.createElement('link'); l.rel = 'stylesheet'; l.href = extra[k]; document.head.appendChild(l);
-    });
-    var bar = document.createElement('div');
-    bar.className = 'type-switch';
-    bar.setAttribute('aria-label', 'font preview');
-    [['cormorant', 'cormorant + dm sans'], ['bodoni', 'bodoni + dm sans'], ['playfair', 'playfair + manrope']].forEach(function (o) {
-      var b = document.createElement('button'); b.type = 'button'; b.textContent = o[1];
-      b.setAttribute('aria-pressed', current === o[0] ? 'true' : 'false');
-      b.addEventListener('click', function () {
-        current = o[0];
-        try { localStorage.setItem('fonts', current); } catch (e) {}
-        document.documentElement.setAttribute('data-fonts', current);
-        $$('button', bar).forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-      });
-      bar.appendChild(b);
-    });
-    var x = document.createElement('button'); x.type = 'button'; x.className = 'x'; x.textContent = 'hide';
-    x.addEventListener('click', function () { try { localStorage.removeItem('fonts'); } catch (e) {} document.documentElement.removeAttribute('data-fonts'); bar.remove(); });
-    bar.appendChild(x);
-    document.body.appendChild(bar);
-  })();
+  // arriving with #something: land on that heading/form once layout has settled (images shift things)
+  if (window.location.hash && window.location.hash.length > 1) {
+    var target = document.getElementById(window.location.hash.slice(1));
+    var goTo = function () { if (target) target.scrollIntoView({ behavior: 'auto', block: 'start' }); };
+    setTimeout(goTo, 150);
+    window.addEventListener('load', function () { setTimeout(goTo, 250); });
+  }
 
   // scroll reveals
   var targets = $$('[data-reveal], [data-stagger]');
@@ -91,12 +62,6 @@
     }, { threshold: 0.35 });
     reels.forEach(function (v) { vo.observe(v); });
   }
-  // a reel slot whose file hasn't arrived yet keeps its "coming soon" note
-  $$('.reel-slot video').forEach(function (v) {
-    var slot = v.closest('.reel-slot');
-    v.addEventListener('loadedmetadata', function () { slot.classList.add('has-video'); });
-    v.addEventListener('error', function () { slot.classList.remove('has-video'); }, true);
-  });
   $$('.reel .sound').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       e.preventDefault();
@@ -111,7 +76,7 @@
     });
   });
 
-  // enquiry form: sends from the page (formsubmit.co → hello@marketia.uk); falls back to email if that fails
+  // enquiry form: sends from the page (formsubmit.co → hello@marketia.uk); offers email if that fails
   var form = $('#enquiry');
   if (form) {
     // pre-tick the service when arriving from a service button (?service=...)
@@ -121,13 +86,10 @@
       var box = form.querySelector('input[name="support"][value="' + pre + '"]');
       if (box) box.checked = true;
     }
-    // arriving at #enquiry: make sure the form, not the page top, is in view once layout settles
-    if (window.location.hash === '#enquiry') {
-      setTimeout(function () { form.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 150);
-    }
-
     var note = $('#form-note');
     var v = function (id) { return (document.getElementById(id).value || '').trim(); };
+    var clean = function (t) { return t.replace(/[<>&"]/g, ''); };
+
     var mailtoFallback = function () {
       var needs = $$('input[name="support"]:checked', form).map(function (c) { return c.value; }).join(', ');
       var subject = 'enquiry from ' + v('f-name') + (v('f-business') ? ' — ' + v('f-business') : '');
@@ -138,6 +100,38 @@
         'upcoming projects / events:', v('f-projects') || '-'
       ];
       window.location.href = 'mailto:hello@marketia.uk?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    };
+
+    // sent: thank them by name and show "what happens next" right there
+    var showSuccess = function () {
+      form.classList.add('sent');
+      note.textContent = 'Thank you! Your enquiry is on its way and I’ll be in touch by email soon.';
+      note.classList.add('ok');
+      var steps = $('#next-steps');
+      var panel = document.createElement('div');
+      panel.className = 'form-success';
+      var first = clean(v('f-name').split(' ')[0]);
+      panel.innerHTML = '<h3 class="h-m">thank you' + (first ? ', ' + first : '') + '.</h3>' +
+        '<p class="muted">Your enquiry has been sent. Here’s what happens next:</p>' +
+        (steps ? steps.innerHTML.replace('<p class="label">what happens next</p>', '') : '') +
+        '<a class="textlink" href="work.html">have a look at the work while you wait</a>';
+      form.appendChild(panel);
+      if (steps) steps.style.display = 'none';
+      panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+
+    // not sent: say so and offer the email route as a button (never jump away on them)
+    var offerEmail = function (why) {
+      form.querySelector('button[type="submit"]').disabled = false;
+      note.textContent = why;
+      note.classList.add('err');
+      if (!$('#alt-email')) {
+        var a = document.createElement('button');
+        a.type = 'button'; a.id = 'alt-email'; a.className = 'textlink alt';
+        a.textContent = 'open my email app with this filled in';
+        a.addEventListener('click', mailtoFallback);
+        note.parentNode.appendChild(a);
+      }
     };
 
     form.addEventListener('submit', function (e) {
@@ -163,16 +157,16 @@
       fetch(endpoint, { method: 'POST', headers: { 'Accept': 'application/json' }, body: data })
         .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
         .then(function (res) {
-          if (!res.ok || String(res.j.success) !== 'true') throw new Error(res.j.message || 'send failed');
-          form.classList.add('sent');
-          note.textContent = 'Thank you! Your enquiry is on its way. I’ll be in touch by email soon.';
-          note.classList.add('ok');
+          if (res.ok && String(res.j.success) === 'true') { showSuccess(); return; }
+          var msg = String((res.j && res.j.message) || '');
+          if (/activat/i.test(msg)) {
+            offerEmail('The form is still being connected on my side, sorry! Please email hello@marketia.uk, or use the button below.');
+          } else {
+            throw new Error(msg || 'send failed');
+          }
         })
         .catch(function () {
-          btn.disabled = false;
-          note.textContent = 'That didn’t send. Opening your email app instead so nothing is lost…';
-          note.classList.add('err');
-          setTimeout(mailtoFallback, 800);
+          offerEmail('That didn’t send. Please email hello@marketia.uk, or use the button below so nothing is lost.');
         });
     });
   }

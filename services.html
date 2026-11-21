@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link id="fonts" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
-  <script>document.documentElement.classList.add("js");try{var f=new URLSearchParams(location.search).get("fonts")||localStorage.getItem("fonts");if(f)document.documentElement.setAttribute("data-fonts",f)}catch(e){}</script>
+  <script>document.documentElement.classList.add("js")</script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f7f4ef'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%23493127'%3Em%3C/text%3E%3C/svg%3E">
 </head>
@@ -37,17 +37,20 @@
     <div class="wrap">
       <p class="label">services</p>
       <div class="split">
-        <h1 class="h-xl">two ways to <em>work together</em>.</h1>
-        <p class="lede">Ongoing social media management, with everything taken care of from planning and content creation to editing, captions, scheduling and publishing. Or, book a dedicated content day and receive a collection of edited photos and videos, ready for you to use across your own channels.</p>
+        <h1 class="h-xl">three ways to <em>work together</em>.</h1>
+        <div>
+          <p class="lede">Ongoing social media management, with everything taken care of from planning and content creation to editing, captions, scheduling and publishing. Or, book a dedicated content day and receive a collection of edited photos and videos, ready for you to use across your own channels.</p>
+          <p class="lede">I also work closely with content creators, capturing their day‑to‑day content, from brand collaborations and gifted partnerships to everyday lifestyle moments. Creating natural, engaging content that feels true to them and works seamlessly across their platforms.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section tight">
     <div class="wrap">
-      <article id="management" class="service-split">
+      <article class="service-split">
         <div class="img r45"><img src="assets/img/svc-ongoing.jpg" alt="the team behind the counter at Luca’s takeaway café" loading="lazy"></div>
-        <div class="service-copy" data-reveal>
+        <div id="management" class="service-copy" data-reveal>
           <p class="label num" data-num="01">ongoing</p>
           <h2 class="h-l">social media <em>management</em></h2>
           <p>For businesses looking for someone to take care of their social media week in, week out. I plan, film, edit, write and publish across Instagram, Facebook and TikTok, so your channels stay consistent, current and engaging while you get on with running the business.</p>
@@ -73,9 +76,9 @@
         </div>
       </article>
 
-      <article id="content" class="service-split">
+      <article class="service-split">
         <div class="img r45"><img src="assets/img/svc-oneoff.jpg" alt="a blue display of Summer Fridays magazines at a pop‑up" loading="lazy"></div>
-        <div class="service-copy" data-reveal>
+        <div id="content" class="service-copy" data-reveal>
           <p class="label num" data-num="02">one‑off or regular</p>
           <h2 class="h-l">content <em>creation</em></h2>
           <p>Hire me for a few hours or a full day. I come in, capture your business, campaign or event, and leave you with a selection of edited photo and video content ready to use across your socials.</p>
@@ -96,10 +99,33 @@
           </div>
           <div class="actions">
             <a class="btn solid" href="contact.html?service=content#enquiry">enquire about a content day</a>
-            <a class="textlink" href="work.html#rockwater">see a shoot day</a>
+            <a class="textlink" href="work.html#reels">see a shoot day</a>
           </div>
         </div>
       </article>
+    </div>
+  </section>
+
+  <section id="creators" class="section">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="label num" data-num="03">creators</p>
+          <h2 class="h-l">content for <em>creators</em>.</h2>
+        </div>
+        <div>
+          <p class="muted">Creator‑led content that brings your brand, experiences and everyday moments to life. From lifestyle and travel to events, collaborations and brand partnerships, I capture the details and experiences that make content feel natural, personal and immersive.</p>
+          <a class="textlink" href="contact.html?service=creator#enquiry">enquire as a creator</a>
+        </div>
+      </div>
+      <div class="grid-3" data-stagger>
+        <div class="img r34"><img src="assets/img/cr-sofa.jpg" alt="a creator reclining on a red velvet sofa" loading="lazy" style="object-position:center 40%"></div>
+        <div class="img r34"><img src="assets/img/cr-door.jpg" alt="a creator in cream standing in a grand doorway" loading="lazy"></div>
+        <div class="img r34"><img src="assets/img/cr-bag.jpg" alt="a creator with a canvas holdall looking out to sea" loading="lazy"></div>
+        <div class="img r34"><img src="assets/img/cr-robes.jpg" alt="four friends in robes with champagne on a boat" loading="lazy"></div>
+        <div class="img r34"><img src="assets/img/cr-detail.jpg" alt="a detail of a cream outfit and a crochet bag" loading="lazy"></div>
+        <div class="img r34"><img src="assets/img/cr-group.jpg" alt="four friends dressed up on a red velvet sofa" loading="lazy"></div>
+      </div>
     </div>
   </section>
 
@@ -107,7 +133,7 @@
     <div class="wrap">
       <div class="section-head" data-reveal>
         <div>
-          <p class="label num" data-num="03">how it works</p>
+          <p class="label num" data-num="04">how it works</p>
           <h2 class="h-l">from <em>hello</em> to handover.</h2>
         </div>
         <p class="muted">Every collaboration starts with understanding your business, what you’re looking for and how I can help. From there, we’ll put a plan together that works for you and your brand.</p>
@@ -133,28 +159,6 @@
     </div>
   </section>
 
-  <section id="creators" class="section">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <div>
-          <p class="label num" data-num="04">creators</p>
-          <h2 class="h-l">for creators, <em>too</em>.</h2>
-        </div>
-        <div>
-          <p class="muted">Creator‑led content that brings your brand, experiences and everyday moments to life. From lifestyle and travel to events, collaborations and brand partnerships, I capture the details and experiences that make content feel natural, personal and immersive.</p>
-          <a class="textlink" href="contact.html?service=creator#enquiry">enquire as a creator</a>
-        </div>
-      </div>
-      <div class="grid-3" data-stagger>
-        <div class="img r34"><img src="assets/img/cr-sofa.jpg" alt="a creator reclining on a red velvet sofa" loading="lazy" style="object-position:center 40%"></div>
-        <div class="img r34"><img src="assets/img/cr-group.jpg" alt="four friends dressed up on a red velvet sofa" loading="lazy"></div>
-        <div class="img r34"><img src="assets/img/cr-door.jpg" alt="a creator in cream standing in a grand doorway" loading="lazy"></div>
-        <div class="img r34"><img src="assets/img/cr-detail.jpg" alt="a detail of a cream outfit and a crochet bag" loading="lazy"></div>
-        <div class="img r34"><img src="assets/img/cr-bag.jpg" alt="a creator with a canvas holdall looking out to sea" loading="lazy"></div>
-        <div class="img r34"><img src="assets/img/cr-robes.jpg" alt="four friends in robes with champagne on a boat" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
 
 </main>
 

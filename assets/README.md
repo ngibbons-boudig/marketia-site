@@ -2,20 +2,20 @@
 
 `img/` holds:
 - the wordmark cut from Tia's logo sheet (`logo-dark.png`, `logo-mid.png`, `logo-light.png`)
-- Tia's Drive photos (Nov 2026), converted from HEIC/DNG to JPEG at ≤1600px: `rw-*` (Rockwater Images), `lucas-*` (Luca's Images),
+- Tia's Drive photos (Nov 2026), converted from HEIC/DNG to JPEG at ≤1600px with a Display P3 → sRGB colour conversion (without it the colours go flat; `tools/export.py` does it): `rw-*` (Rockwater Images), `lucas-*` (Luca's Images),
   `cr-*` (Images for Creators), `me-*` (4 About Me Images), `svc-ongoing` / `svc-oneoff` (Ongoing vs One off), `hero-desk` (Front Page)
 - `post-*` — the photo cropped from each of her five personal‑post screenshots; each links to the real post on @tiaevaans
 - photos still from her portfolio PDF: `bellagio-*`, `life-*` (lifestyle), `tia-steps`, `lucas-beach`
 - `about-standing` is still a small carousel crop; swap for an original with the same filename when she has one
 
-Spare Drive photos not currently placed: `rw-cake`, `rw-lounge`, `rw-outside`, `rw-room`, `rw-vinyl`.
+Spare Drive photos not currently placed: `rw-breakfast`, `rw-lounge`, `rw-outside`, `rw-room`, `rw-vinyl`.
 
 # video
 
 `video/` holds the five reels from Tia's Drive, compressed to 540p MP4 with poster JPEGs of the same name
-(`boat-club-2`, `boat-club-3`, `lulas`, `midas`, `outlaw`). They play muted when scrolled into view on the work page.
+(`boat-club-2`, `boat-club-3`, `lulas`, `midas`, `outlaw`, `bellaggio`). They play muted when scrolled into view on the work page.
 To add a reel: drop `name.mp4` + `name.jpg` here and add a line to `REELS` in the generator (or copy a `<figure class="reel">` block).
-The Bellagio case study on the work page has a reel slot waiting for `bellagio.mp4` (540×960 like the others); it plays as soon as the file exists.
+The Bellaggio reel (`bellaggio.mp4`) sits in the first slot of its case study.
 
 # image slots (what each file is used for)
 

@@ -3,15 +3,16 @@
 Static site for marketia (Tia) — social media management & content creation, Dorset.
 
 - `index.html` home · `about.html` · `services.html` · `work.html` · `contact.html`
-- `css/style.css`, `js/main.js` — styling, scroll reveals, mobile nav, reels, the enquiry form, the font preview switch
+- `css/style.css`, `js/main.js` — styling, scroll reveals, mobile nav, reels, the enquiry form
+- `tools/gen.py` builds the pages; `tools/export.py` converts Tia's Drive photos (HEIC/DNG, Display P3) into web JPEGs with the right colours
 - `assets/` — drop Tia's photos here; `assets/README.md` lists every image slot by name
 - `BRIEF.md` — what was collated from @markettiaa plus Tia's own brief
-- `FEEDBACK.md` — Tia's round‑1 feedback, what was done and what's still waiting on her
+- `FEEDBACK.md` — Tia's feedback rounds, what was done and what's still waiting on her
 
 Header and footer are repeated in each page, so a nav change means editing all five files.
 Service buttons link to `contact.html?service=management|content|creator#enquiry`, which pre‑ticks the matching box and scrolls to the form.
 
-**Font preview:** add `?fonts=bodoni` or `?fonts=playfair` to any page URL to try the alternative pairings (default is Cormorant Garamond + DM Sans). A small switcher appears bottom‑left; `?fonts=off` clears it. The five pages are generated from `tools/gen.py` (all copy and image placements live there): edit it, run `python3 tools/gen.py`, commit the HTML it writes.
+The five pages are generated from `tools/gen.py` (all copy and image placements live there): edit it, run `python3 tools/gen.py`, commit the HTML it writes.
 
 ## Run locally
 ```bash
